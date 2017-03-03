@@ -1,0 +1,7 @@
+<div class="shop" ng-repeat="shop in shopCtrl.shopList">
+        <p ng-bind="shop.name"></p>
+        <p ng-bind="shop.address"></p>
+        <p ng-bind="shop.serialNumber"></p>
+        <a ng-href="#!/start/{{shop.serialNumber}}">Goods here</a>
+        <span ng-click="shopCtrl.requestGoodsList(this)">click</span>
+</div>

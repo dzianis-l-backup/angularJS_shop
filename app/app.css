@@ -1,0 +1,27 @@
+html{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+body{
+    height:100%;
+}
+
+.app{
+    transform:translate(-50%,-50%);
+    display:inline-block;
+    left:50%;
+    top:50%;
+    position:relative;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.main{
+    transform:translate(-50%,-50%);
+    left:50%;
+    top:50%;
+    display:inline-block;
+    position: relative;
+}

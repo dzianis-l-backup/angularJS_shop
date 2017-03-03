@@ -1,0 +1,11 @@
+.shop{
+    display:inline-block;
+    float:left;
+    width:100px;
+    height:200px;
+    border:1px solid black;
+    border-radius:1px;
+    padding:5px;
+    box-sizing: border-box;
+    margin:5px;
+}

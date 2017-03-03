@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+    <head>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="angular.min.js"></script>
+        <script src="angular-route-1.5.11.js"></script>
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+        <script src="shop-list/shop-list.module.js"></script>
+        <script src="shop-list/shop-list.component.js"></script>
+        <script src="goods-list/goods-list.module.js"></script>
+        <script src="goods-list/goods-list.component.js"></script>
+
+        <link href="app.css" rel="stylesheet">
+        <link href="shop-list/shop-list.css" rel="stylesheet">
+        <link href="goods-list/goods-list.css" rel="stylesheet">
+
+        <script src="../jquery-3.1.1.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+
+        <title>AngularJS</title>
+
+    </head>
+    <body>
+        <div class="main">
+            <ng-view></ng-view>
+        </div>
+
+    </body>
+</html>
