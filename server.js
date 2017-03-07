@@ -2,10 +2,9 @@ var express = require("express");
 var path = require("path");
 var app = express();
 
+app.use(express.static(path.join(__dirname,'/')));
 app.use(express.static(path.join(__dirname,'/app')));
 app.use(express.static('/bootstrap'));
-
-app.use(express.static(path.join(__dirname,'/')));
 
 app.get("/", function(req, res,next) {
     return res.sendFile(path.join(__dirname,"/app/index.html"));
@@ -20,114 +19,79 @@ app.get("/shopList", function(req, res,next) {
     console.log("GET /shopList");
     res.send([
         {
-            name:"Collins",
-            address:"234",
-            workingHours:'9-12',
-            serialNumber:1,
-            goods:[
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                }
-            ]
+            name:"Rublevskiy",
+            address:"Suharevskaya 62",
+            serialNumber:0
         },
         {
-            name:"Collins",
-            address:"234",
-            workingHours:'9-12',
-            serialNumber:2,
-            goods:[
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-                ,
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-                ,
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                }
-            ]
+            name:"5element",
+            address:"Odincova 20",
+            serialNumber:1
         },
         {
-            name:"Collins",
-            address:"234",
-            workingHours:'9-12',
-            serialNumber:3,
-            goods:[
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                }
-            ]
+            name:"MTS",
+            address:"Kalvaryiskaya 60",
+            serialNumber:2
         },
         {
-            name:"Collins",
-            address:"234",
-            workingHours:'9-12',
-            serialNumber:4,
-            goods:[
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                },
-                {
-                    name:"Collins",
-                    description:"blablabla"
-                }
-            ]
+            name:"Velcom",
+            address:"Goreckogo 2",
+            serialNumber:3
         }
-
     ]);
 });
 
 app.get("/goods/:num", function(req, res,next) {
 
-    console.log("GET /goods");
+    console.log("GET /goods "+req.params.num);
     var num = req.params.num;
-    res.send([
-        {
-            name:"Collins1",
-            description:"blablabla1"
-        },
-        {
-            name:"Collins2",
-            description:"blablabla2"
-        },
-        {
-            name:"Collins3",
-            description:"blablabla3"
-        },
-        {
-            name:"Collins4",
-            description:"blablabla4"
-        },
-        {
-            name:"Collins5",
-            description:"blablabla5"
-        }
-    ]);
+    switch(num){
+
+        case "0":
+            res.send([
+                {
+                    name:"RIKKI",
+                    description:"Chocolate"
+                },
+                {
+                    name:"HELEN",
+                    description:"powder"
+                },
+                {
+                    name:"GALLINA BLANCA",
+                    description:"bouillon"
+                },
+                {
+                    name:"DOVE",
+                    description:"gel"
+                },
+                {
+                    name:"DANONE",
+                    description:"yogurt"
+                }
+            ]);
+            break;
+        case "1":
+            res.send([
+                {
+                    name:"Lenovo",
+                    description:"Lenovo IdeaPad 110-17ACL (80UM002FRA)"
+                },
+                {
+                    name:"Asus",
+                    description:"Asus F551CA-SX051D"
+                },
+                {
+                    name:"Dell",
+                    description:"Dell Inspiron 15 3541 (3541-8529)"
+                }
+            ]);
+        break;
+        default:
+            res.send({});
+            break;
+    }
+
 } );
 
 app.post("/test", function(req, res) {

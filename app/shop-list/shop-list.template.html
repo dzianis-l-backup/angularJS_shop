@@ -1,7 +1,9 @@
 <div class="shop" ng-repeat="shop in shopCtrl.shopList">
-        <p ng-bind="shop.name"></p>
-        <p ng-bind="shop.address"></p>
-        <p ng-bind="shop.serialNumber"></p>
+        <div class ="shop__info_center" ng-bind="shop.name"></div>
+        <br>
+        <div class="shop__info">Address: </div><div class="shop__info_overflow" ng-bind="shop.address"></div>
+        <hr>
         <a ng-href="#!/start/{{shop.serialNumber}}">Goods here</a>
-        <span ng-click="shopCtrl.requestGoodsList(this)">click</span>
 </div>
+<br class="shop_clearfix">
+<a ng-href="#!/">back</a>

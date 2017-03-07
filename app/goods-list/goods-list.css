@@ -1,3 +1,29 @@
 .goods{
+    display:inline-block;
+    float:left;
+    width:300px;
+    height:100px;
+    border:1px solid black;
+    border-radius:1px;
+    padding:15px;
+    box-sizing: border-box;
+    margin:10px;
+}
 
+.goods__info{
+    font-weight:bold;
+    display:inline-block;
+    position:relative;float: left;
+}
+
+.goods__info_center{
+    display:inline-block;
+    position:relative;
+    transform: translate(-50%,0);
+    left:50%;
+}
+
+
+.goods_clearfix{
+    clear:both;
 }

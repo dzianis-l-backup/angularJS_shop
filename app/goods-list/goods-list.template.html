@@ -1,7 +1,9 @@
-<div class="table">
-    <div ng-repeat="goods in $ctrl.goods">
-        <p ng-bind="goods.name"></p>
-        <p ng-bind="goods.description"></p>
+<div>
+    <div class="goods" ng-repeat="goods in $ctrl.goods">
+        <div class="goods__info_center" ng-bind="goods.name"></div>
+        <br>
+        <div class="goods__info" ng-bind="goods.description"></div>
     </div>
 </div>
+<br class="shop_clearfix">
 <a ng-href="#!/start">back</a>
