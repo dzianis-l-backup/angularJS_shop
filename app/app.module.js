@@ -1,5 +1,5 @@
 angular
-    .module('app',['ngRoute','shopList','goodsList'])
+    .module('app',['ngRoute','ngAnimate','shopList','goodsList'])
 
     .value('shopList',{
         shopList:[]

@@ -1,0 +1,27 @@
+.shop.ng-enter{
+    animation:2s shop-enter;    
+}
+@keyframes shop-enter{
+    0% {   opacity:0;  }
+    100% {  opacity:1;  }
+}
+
+.shop.ng-move{
+    animation:2s shop-move;    
+}
+
+@keyframes shop-move{
+    0% {   width:100%;  }
+    50% {    width:50%;  }
+    100% {   width:100%; }
+}
+
+.viewMain.ng-enter{
+    animation:2s viewMain-leave;  
+    z-index: 99;  
+}
+
+@keyframes viewMain-leave{
+    0% {   opacity:0;  }
+    100% {  opacity:1;  }
+}

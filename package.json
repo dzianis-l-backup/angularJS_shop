@@ -1,0 +1,25 @@
+{
+  "name": "angular1.5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "angular-animate": "^1.5.11",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DziLean/angularJS_shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DziLean/angularJS_shop/issues"
+  },
+  "homepage": "https://github.com/DziLean/angularJS_shop#readme"
+}
